@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfnqfn3hxy1gg"]
+[gd_scene load_steps=5 format=3 uid="uid://dfnqfn3hxy1gg"]
 
 [ext_resource type="Script" path="res://scripts/interactable_object_example.gd" id="1_o87ux"]
 [ext_resource type="Texture2D" uid="uid://bih40837wi5jj" path="res://icon.svg" id="2_5pcej"]
+[ext_resource type="PackedScene" uid="uid://dvxqbgygomabi" path="res://scenes/transparent_object.tscn" id="3_kev8k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bxf2h"]
 
@@ -14,3 +15,5 @@ shape = SubResource("RectangleShape2D_bxf2h")
 [node name="Icon" type="Sprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("2_5pcej")
+
+[node name="TransparentObject" parent="." instance=ExtResource("3_kev8k")]
