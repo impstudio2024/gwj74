@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://6quj6tmj4lo6"]
+[gd_scene load_steps=17 format=3 uid="uid://6quj6tmj4lo6"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_jaktl"]
 [ext_resource type="Texture2D" uid="uid://dfju773am4dq1" path="res://sprites/player/player_walking_front-Sheet.png" id="2_cetd5"]
@@ -87,6 +87,7 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2na6s"]
 size = Vector2(9, 16)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_366kv"]
 radius = 4.0
 
@@ -100,7 +101,6 @@ animation = &"moving_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_2na6s")
-frame_progress = 0.687402
 
 [node name="InteractionArea" type="Area2D" parent="."]
 

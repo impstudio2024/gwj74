@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://5fykf5wanf0d"]
+[gd_scene load_steps=7 format=4 uid="uid://5fykf5wanf0d"]
 
 [ext_resource type="PackedScene" uid="uid://6quj6tmj4lo6" path="res://scenes/player.tscn" id="1_16oua"]
 [ext_resource type="Script" path="res://scripts/player_camera.gd" id="2_73jv1"]
 [ext_resource type="Texture2D" uid="uid://dfiqt7bak1gs0" path="res://assets/sprites/walls.png" id="3_8snio"]
+[ext_resource type="PackedScene" uid="uid://dfnqfn3hxy1gg" path="res://scenes/interactable_object_example.tscn" id="3_out3i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t43ex"]
 texture = ExtResource("3_8snio")
@@ -198,11 +199,6 @@ terrain_set_0/terrain_4/color = Color(0.399717, 0.361084, 0.349816, 1)
 terrain_set_0/terrain_5/name = "White Wall"
 terrain_set_0/terrain_5/color = Color(0.928853, 0.98855, 0.938096, 1)
 sources/0 = SubResource("TileSetAtlasSource_t43ex")
-[gd_scene load_steps=4 format=3 uid="uid://dew26sjd0s26y"]
-
-[ext_resource type="PackedScene" uid="uid://6quj6tmj4lo6" path="res://scenes/player.tscn" id="1_16oua"]
-[ext_resource type="Script" path="res://scripts/player_camera.gd" id="2_73jv1"]
-[ext_resource type="PackedScene" uid="uid://dfnqfn3hxy1gg" path="res://scenes/interactable_object_example.tscn" id="3_out3i"]
 
 [node name="PolygonLevel" type="Node2D"]
 texture_filter = 3
@@ -216,5 +212,6 @@ script = ExtResource("2_73jv1")
 [node name="Walls" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD5//v/AAABAAAAAAD6//v/AAABAAAAAAD7//v/AAAAAAAAAAD8//v/AAAAAAAAAAD9//v/AAAAAAAAAAD+//v/AAABAAAAAAD///v/AAAAAAAAAAAAAPv/AAAAAAAAAAABAPv/AAABAAAAAAACAPv/AAAAAAAAAAADAPv/AAABAAAAAAAEAPv/AAAAAAAAAAAFAPv/AAAAAAAAAAABAP7/AAAHAAAAAAACAP7/AAAHAAAAAAADAP7/AAAGAAAAAAAEAP7/AAAGAAAAAAAFAP3/AAAGAAAAAAAFAP7/AAAHAAAAAAAFAP//AAAGAAAAAAD3/wEAAAABAAEAAAD3/wAAAAABAAEAAAD3////AAAAAAEAAAD4////AAAAAAEAAAD5////AAABAAEAAAD5//7/AAAAAAEAAAD5//3/AAABAAEAAAD6/wIAAAAEAAEAAAD7/wEAAAAEAAEAAAD8/wEAAAADAAEAAAD9/wEAAAAEAAEAAAABAAMAAAAHAAEAAAACAAIAAAAGAAEAAAADAAMAAAAHAAEAAAAFAAMAAAAHAAEAAAD7/wQAAAAGAAEAAAD8/wQAAAAGAAEAAAD9/wQAAAAHAAEAAAD+/wQAAAAHAAEAAAD//wQAAAAHAAEAAAACAAEAAAAGAAEAAAACAAMAAAAGAAEAAAACAAQAAAAHAAEAAAACAAUAAAAGAAEAAAAFAAEAAAAGAAEAAAAFAAUAAAAGAAEAAAAHAAMAAAAGAAEAAAAHAAEAAAAHAAEAAAAHAAUAAAAGAAEAAAA=")
 tile_set = SubResource("TileSet_j7bfm")
+
 [node name="InteractableObjectExample" parent="." instance=ExtResource("3_out3i")]
 position = Vector2(61, -26)
