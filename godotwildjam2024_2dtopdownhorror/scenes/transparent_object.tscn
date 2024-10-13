@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dvxqbgygomabi"]
 
 [ext_resource type="Script" path="res://scripts/transparent_object.gd" id="1_l8qty"]
-[ext_resource type="Texture2D" uid="uid://dhyw0poqknwnp" path="res://sprites/transparency_check.png" id="2_g4pka"]
+[ext_resource type="Texture2D" uid="uid://dhyw0poqknwnp" path="res://sprites/test_sprites/transparency_check.png" id="2_g4pka"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_du12q"]
 size = Vector2(64, 64)
@@ -12,7 +12,7 @@ script = ExtResource("1_l8qty")
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_g4pka")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_du12q")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
