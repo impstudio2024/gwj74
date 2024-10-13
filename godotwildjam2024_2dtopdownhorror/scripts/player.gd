@@ -9,13 +9,13 @@ func _process(delta):
 	movement_controller()
 
 func movement_controller():
-	if Input.is_action_pressed("w"):
+	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
-	if Input.is_action_pressed("a"):
+	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
-	if Input.is_action_pressed("s"):
+	if Input.is_action_pressed("move_down"):
 		velocity.y += 1
-	if Input.is_action_pressed("d"):
+	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
 	if velocity:
 		if is_equal_approx(PI / 2, velocity.angle()):
