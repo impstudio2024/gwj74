@@ -1,12 +1,14 @@
 extends CharacterBody2D
 var speed = 150.0
+var controllable = true
 @onready var sprite = $Sprite
 
 func _ready():
 	pass
 
 func _process(delta):
-	movement_controller()
+	if controllable:
+		movement_controller()
 
 func movement_controller():
 	if Input.is_action_just_pressed("ui_accept"):

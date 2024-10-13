@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://5fykf5wanf0d"]
 
 [ext_resource type="PackedScene" uid="uid://6quj6tmj4lo6" path="res://scenes/player.tscn" id="1_16oua"]
-[ext_resource type="Script" path="res://scripts/player_camera.gd" id="2_73jv1"]
+[ext_resource type="PackedScene" uid="uid://f8ud243oy7i6" path="res://scenes/player_camera.tscn" id="2_w5a54"]
 [ext_resource type="Texture2D" uid="uid://dfiqt7bak1gs0" path="res://assets/sprites/walls.png" id="3_8snio"]
 [ext_resource type="PackedScene" uid="uid://dfnqfn3hxy1gg" path="res://scenes/interactable_object_example.tscn" id="3_out3i"]
 
@@ -205,9 +205,7 @@ texture_filter = 3
 
 [node name="Player" parent="." instance=ExtResource("1_16oua")]
 
-[node name="PlayerCamera" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
-script = ExtResource("2_73jv1")
+[node name="PlayerCamera" parent="." instance=ExtResource("2_w5a54")]
 
 [node name="Walls" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD5//v/AAABAAAAAAD6//v/AAABAAAAAAD7//v/AAAAAAAAAAD8//v/AAAAAAAAAAD9//v/AAAAAAAAAAD+//v/AAABAAAAAAD///v/AAAAAAAAAAAAAPv/AAAAAAAAAAABAPv/AAABAAAAAAACAPv/AAAAAAAAAAADAPv/AAABAAAAAAAEAPv/AAAAAAAAAAAFAPv/AAAAAAAAAAABAP7/AAAHAAAAAAACAP7/AAAHAAAAAAADAP7/AAAGAAAAAAAEAP7/AAAGAAAAAAAFAP3/AAAGAAAAAAAFAP7/AAAHAAAAAAAFAP//AAAGAAAAAAD3/wEAAAABAAEAAAD3/wAAAAABAAEAAAD3////AAAAAAEAAAD4////AAAAAAEAAAD5////AAABAAEAAAD5//7/AAAAAAEAAAD5//3/AAABAAEAAAD6/wIAAAAEAAEAAAD7/wEAAAAEAAEAAAD8/wEAAAADAAEAAAD9/wEAAAAEAAEAAAABAAMAAAAHAAEAAAACAAIAAAAGAAEAAAADAAMAAAAHAAEAAAAFAAMAAAAHAAEAAAD7/wQAAAAGAAEAAAD8/wQAAAAGAAEAAAD9/wQAAAAHAAEAAAD+/wQAAAAHAAEAAAD//wQAAAAHAAEAAAACAAEAAAAGAAEAAAACAAMAAAAGAAEAAAACAAQAAAAHAAEAAAACAAUAAAAGAAEAAAAFAAEAAAAGAAEAAAAFAAUAAAAGAAEAAAAHAAMAAAAGAAEAAAAHAAEAAAAHAAEAAAAHAAUAAAAGAAEAAAA=")
