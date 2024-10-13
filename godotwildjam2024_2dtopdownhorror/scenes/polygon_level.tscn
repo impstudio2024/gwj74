@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dew26sjd0s26y"]
+[gd_scene load_steps=4 format=3 uid="uid://dew26sjd0s26y"]
 
-[ext_resource type="PackedScene" uid="uid://c7gawbr1h5164" path="res://scenes/player.tscn" id="1_16oua"]
+[ext_resource type="PackedScene" uid="uid://6quj6tmj4lo6" path="res://scenes/player.tscn" id="1_16oua"]
 [ext_resource type="Script" path="res://scripts/player_camera.gd" id="2_73jv1"]
+[ext_resource type="PackedScene" uid="uid://dfnqfn3hxy1gg" path="res://scenes/interactable_object_example.tscn" id="3_out3i"]
 
 [node name="PolygonLevel" type="Node2D"]
 texture_filter = 3
@@ -11,3 +12,6 @@ texture_filter = 3
 [node name="PlayerCamera" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 script = ExtResource("2_73jv1")
+
+[node name="InteractableObjectExample" parent="." instance=ExtResource("3_out3i")]
+position = Vector2(61, -26)

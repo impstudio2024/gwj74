@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 var speed = 300.0
 @onready var sprite = $Sprite
 
@@ -9,6 +10,8 @@ func _process(delta):
 	movement_controller()
 
 func movement_controller():
+	if Input.is_action_just_pressed("ui_accept"):
+		interact()
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
 	if Input.is_action_pressed("move_left"):
@@ -32,3 +35,10 @@ func movement_controller():
 		sprite.pause()
 	move_and_slide()
 	velocity = Vector2.ZERO
+
+func interact():
+	for area in get_node("InteractionArea").get_overlapping_areas():
+		if area is InteractableObject:
+			area.interact()
+			return true
+	return false
