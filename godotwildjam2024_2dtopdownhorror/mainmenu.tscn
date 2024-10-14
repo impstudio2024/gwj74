@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://chilot0tqv6te"]
+
+[ext_resource type="Script" path="res://mainmenu.gd" id="1_vrsbh"]
+[ext_resource type="FontFile" uid="uid://cmpdskqov2uhi" path="res://assets/ui/04B03b-Ole.ttf" id="2_gt7dq"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vrsbh")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(320, 32)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -55.0
+offset_right = 42.5
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.027451, 0.0392157, 0.0392157, 1)
+theme_override_colors/icon_normal_color = Color(0.317647, 0.243137, 0.188235, 1)
+theme_override_colors/icon_pressed_color = Color(0.501961, 0.498039, 0.498039, 1)
+theme_override_colors/icon_hover_color = Color(0.501961, 0.498039, 0.498039, 1)
+theme_override_fonts/font = ExtResource("2_gt7dq")
+theme_override_font_sizes/font_size = 64
+text = "PLAY"
+
+[node name="Quit Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.027451, 0.0392157, 0.0392157, 1)
+theme_override_colors/icon_normal_color = Color(0.317647, 0.243137, 0.188235, 1)
+theme_override_colors/icon_pressed_color = Color(0.501961, 0.498039, 0.498039, 1)
+theme_override_colors/icon_hover_color = Color(0.501961, 0.498039, 0.498039, 1)
+theme_override_fonts/font = ExtResource("2_gt7dq")
+theme_override_font_sizes/font_size = 64
+text = "QUIT"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]
