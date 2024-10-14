@@ -1,4 +1,8 @@
 extends InteractableObject
 
 func interact():
-	get_parent().get_node("PlayerCamera/CanvasLayer/CenterContainer").add_child(load("res://scenes/computer_scene.tscn").instantiate())
+	if get_parent().get_node("Player").controllable:
+		get_parent().get_node("PlayerCamera").add_child(load("res://scenes/computer_scene.tscn").instantiate())
+	else:
+		get_parent().get_node("PlayerCamera").get_node("ComputerScene").close()
+		

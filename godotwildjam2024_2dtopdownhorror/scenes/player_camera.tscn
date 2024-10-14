@@ -1,15 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://f8ud243oy7i6"]
+[gd_scene load_steps=2 format=3 uid="uid://f8ud243oy7i6"]
 
 [ext_resource type="Script" path="res://scripts/player_camera.gd" id="1_8l7kn"]
-[ext_resource type="PackedScene" uid="uid://cy7tqfskp8g41" path="res://scenes/computer_scene.tscn" id="2_hkawv"]
 
 [node name="PlayerCamera" type="Camera2D"]
 top_level = true
+z_index = 5
+scale = Vector2(0.8, 0.8)
 zoom = Vector2(4, 4)
 script = ExtResource("1_8l7kn")
-
-[node name="ComputerScene" parent="." instance=ExtResource("2_hkawv")]
-offset_left = -177.0
-offset_top = -108.0
-offset_right = 571.0
-offset_bottom = 324.0
