@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddsrgbr6iuyal"]
+
+[ext_resource type="Script" path="res://scenes/minigames/block_packing/block_packing.gd" id="1_cqy1d"]
+[ext_resource type="Texture2D" uid="uid://bih40837wi5jj" path="res://icon.svg" id="1_h2bxe"]
+
+[node name="BlockPacking" type="TextureRect"]
+offset_left = -96.0
+offset_top = -96.0
+offset_right = 96.0
+offset_bottom = 96.0
+script = ExtResource("1_cqy1d")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -96.0
+offset_right = 96.0
+offset_bottom = 96.0
+columns = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(96, 96)
+texture = ExtResource("1_h2bxe")
