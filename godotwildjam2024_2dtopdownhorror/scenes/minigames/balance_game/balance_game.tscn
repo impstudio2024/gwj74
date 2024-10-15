@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs4s6ap5pcobm"]
+
+[ext_resource type="Script" path="res://scenes/minigames/balance_game/balance_game.gd" id="1_mmfpw"]
+[ext_resource type="Texture2D" uid="uid://dhyw0poqknwnp" path="res://sprites/test_sprites/transparency_check.png" id="2_88eye"]
+
+[node name="BalanceGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mmfpw")
+
+[node name="TransparencyCheck" type="Sprite2D" parent="."]
+scale = Vector2(3, 1)
+texture = ExtResource("2_88eye")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
