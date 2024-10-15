@@ -1,7 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy7tqfskp8g41"]
+[gd_scene load_steps=7 format=3 uid="uid://cy7tqfskp8g41"]
 
 [ext_resource type="Script" path="res://scripts/computer_scene.gd" id="1_682rm"]
 [ext_resource type="Texture2D" uid="uid://cx76ln8g2dqrh" path="res://sprites/hud/screen.png" id="2_85qrf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cjl2"]
+bg_color = Color(0.109804, 0.117647, 0.121569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cunsd"]
+bg_color = Color(0.109804, 0.117647, 0.121569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyvgk"]
+bg_color = Color(0.109804, 0.117647, 0.121569, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xd7ih"]
 animations = [{
@@ -15,7 +24,6 @@ animations = [{
 }]
 
 [node name="ComputerScene" type="TextureRect"]
-anchors_preset = -1
 offset_left = -84.0
 offset_top = -46.0
 offset_right = 588.0
@@ -23,10 +31,14 @@ offset_bottom = 322.0
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_682rm")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(-168, -92)
-sprite_frames = SubResource("SpriteFrames_xd7ih")
-centered = false
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -698.0
+offset_top = -278.0
+offset_right = 202.0
+offset_bottom = 622.0
+scale = Vector2(20.408, 1)
+color = Color(0.580392, 0.627451, 0.619608, 1)
 
 [node name="ComputerBackground" type="ColorRect" parent="."]
 z_index = -1
@@ -53,6 +65,14 @@ offset_left = 0.160004
 offset_top = -0.0319977
 offset_right = 430.16
 offset_bottom = 239.968
+theme_override_styles/fill = SubResource("StyleBoxFlat_3cjl2")
+theme_override_styles/background = SubResource("StyleBoxFlat_cunsd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pyvgk")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-168, -92)
+sprite_frames = SubResource("SpriteFrames_xd7ih")
+centered = false
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.8
