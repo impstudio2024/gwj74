@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://chilot0tqv6te"]
 
-[ext_resource type="Script" path="res://scripts/mainmenu.gd" id="1_vrsbh"]
-[ext_resource type="FontFile" uid="uid://cmpdskqov2uhi" path="res://assets/ui/04B03b-Ole.ttf" id="2_gt7dq"]
+[ext_resource type="Script" path="res://scripts/mainmenu.gd" id="1_rmvx6"]
+[ext_resource type="FontFile" uid="uid://cmpdskqov2uhi" path="res://assets/ui/04B03b-Ole.ttf" id="2_o8g1i"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_vrsbh")
+script = ExtResource("1_rmvx6")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(320, 32)
@@ -36,7 +36,7 @@ theme_override_colors/font_pressed_color = Color(0.027451, 0.0392157, 0.0392157,
 theme_override_colors/icon_normal_color = Color(0.317647, 0.243137, 0.188235, 1)
 theme_override_colors/icon_pressed_color = Color(0.501961, 0.498039, 0.498039, 1)
 theme_override_colors/icon_hover_color = Color(0.501961, 0.498039, 0.498039, 1)
-theme_override_fonts/font = ExtResource("2_gt7dq")
+theme_override_fonts/font = ExtResource("2_o8g1i")
 theme_override_font_sizes/font_size = 64
 text = "PLAY"
 
@@ -46,7 +46,7 @@ theme_override_colors/font_pressed_color = Color(0.027451, 0.0392157, 0.0392157,
 theme_override_colors/icon_normal_color = Color(0.317647, 0.243137, 0.188235, 1)
 theme_override_colors/icon_pressed_color = Color(0.501961, 0.498039, 0.498039, 1)
 theme_override_colors/icon_hover_color = Color(0.501961, 0.498039, 0.498039, 1)
-theme_override_fonts/font = ExtResource("2_gt7dq")
+theme_override_fonts/font = ExtResource("2_o8g1i")
 theme_override_font_sizes/font_size = 64
 text = "QUIT"
 
