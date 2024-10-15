@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://chilot0tqv6te"]
 
-[ext_resource type="Script" path="res://mainmenu.gd" id="1_vrsbh"]
+[ext_resource type="Script" path="res://scripts/mainmenu.gd" id="1_vrsbh"]
 [ext_resource type="FontFile" uid="uid://cmpdskqov2uhi" path="res://assets/ui/04B03b-Ole.ttf" id="2_gt7dq"]
 
 [node name="Menu" type="Control"]
