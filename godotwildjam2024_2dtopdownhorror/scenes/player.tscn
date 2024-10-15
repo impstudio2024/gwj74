@@ -86,7 +86,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2na6s"]
-size = Vector2(9, 16)
+size = Vector2(9, 8)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_366kv"]
 radius = 4.0
@@ -95,14 +95,16 @@ radius = 4.0
 radius = 0.0
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_jaktl")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_gn4cd")
 animation = &"moving_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(-0.5, 4)
 shape = SubResource("RectangleShape2D_2na6s")
 
 [node name="InteractionArea" type="Area2D" parent="."]
