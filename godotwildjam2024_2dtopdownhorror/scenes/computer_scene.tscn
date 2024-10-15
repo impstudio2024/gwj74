@@ -1,15 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cy7tqfskp8g41"]
+[gd_scene load_steps=6 format=3 uid="uid://cy7tqfskp8g41"]
 
 [ext_resource type="Script" path="res://scripts/computer_scene.gd" id="1_682rm"]
 [ext_resource type="Texture2D" uid="uid://cx76ln8g2dqrh" path="res://sprites/hud/screen.png" id="2_85qrf"]
+[ext_resource type="FontFile" uid="uid://ocyyhnho2bvu" path="res://assets/ui/04B03-XKP.ttf" id="2_tniab"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cjl2"]
-bg_color = Color(0.109804, 0.117647, 0.121569, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cunsd"]
-bg_color = Color(0.109804, 0.117647, 0.121569, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyvgk"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42cmr"]
 bg_color = Color(0.109804, 0.117647, 0.121569, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xd7ih"]
@@ -65,9 +60,9 @@ offset_left = 0.160004
 offset_top = -0.0319977
 offset_right = 430.16
 offset_bottom = 239.968
-theme_override_styles/fill = SubResource("StyleBoxFlat_3cjl2")
-theme_override_styles/background = SubResource("StyleBoxFlat_cunsd")
-theme_override_styles/normal = SubResource("StyleBoxFlat_pyvgk")
+theme_override_fonts/normal_font = ExtResource("2_tniab")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_42cmr")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(-168, -92)
