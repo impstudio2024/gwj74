@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://f8ud243oy7i6"]
+[gd_scene load_steps=3 format=3 uid="uid://f8ud243oy7i6"]
 
 [ext_resource type="Script" path="res://scripts/player_camera.gd" id="1_8l7kn"]
+[ext_resource type="PackedScene" uid="uid://dkjyfowrd648c" path="res://scenes/minigames/pump_game/pump_game.tscn" id="2_jigqa"]
 
 [node name="PlayerCamera" type="Camera2D"]
 top_level = true
@@ -8,3 +9,5 @@ z_index = 5
 scale = Vector2(0.8, 0.8)
 zoom = Vector2(4, 4)
 script = ExtResource("1_8l7kn")
+
+[node name="PumpGame" parent="." instance=ExtResource("2_jigqa")]
