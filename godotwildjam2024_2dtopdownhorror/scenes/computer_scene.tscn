@@ -35,9 +35,9 @@ offset_bottom = 622.0
 scale = Vector2(20.408, 1)
 color = Color(0.580392, 0.627451, 0.619608, 1)
 
-[node name="ComputerBackground" type="ColorRect" parent="Sprite"]
+[node name="Sprite#ComputerBackground" type="ColorRect" parent="."]
 z_index = -1
-anchors_preset = -1
+layout_mode = 0
 anchor_left = -0.232
 anchor_top = -0.201
 anchor_right = -0.232
@@ -48,7 +48,7 @@ offset_right = 697.904
 offset_bottom = 423.968
 color = Color(0, 0, 0, 1)
 
-[node name="Timer" type="Timer" parent="Sprite"]
+[node name="Sprite#Timer" type="Timer" parent="."]
 wait_time = 0.8
 autostart = true
 
@@ -63,6 +63,7 @@ offset_left = 0.160004
 offset_top = -0.0320015
 offset_right = 430.16
 offset_bottom = 239.968
+mouse_default_cursor_shape = 1
 theme_override_fonts/normal_font = ExtResource("2_tniab")
 theme_override_font_sizes/normal_font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_42cmr")
@@ -71,5 +72,3 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_42cmr")
 position = Vector2(-168, -92)
 sprite_frames = SubResource("SpriteFrames_xd7ih")
 centered = false
-
-[connection signal="timeout" from="Sprite/Timer" to="." method="_on_timer_timeout"]

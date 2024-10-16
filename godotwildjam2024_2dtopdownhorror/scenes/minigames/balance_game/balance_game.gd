@@ -19,7 +19,7 @@ func _process(delta):
 		speed += 0.1
 	balance += speed 
 	if abs(balance) > 60:
-		printerr()
+		printerr("Balance game failed")
 		get_parent().get_parent().get_node("Player").controllable = true
 		queue_free()
 	$TransparencyCheck.rotation = deg_to_rad(balance)
