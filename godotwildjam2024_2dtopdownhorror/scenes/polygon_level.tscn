@@ -28,6 +28,7 @@ tile_map_data = PackedByteArray("AABq/6L/AAAGAAwAAABn/6H/AAAGAAwAAABm/6X/AAAGAAw
 tile_set = ExtResource("4_dnq3g")
 
 [node name="Player" parent="." instance=ExtResource("1_16oua")]
+position = Vector2(-2424, -1047)
 
 [node name="InteriorWalls" type="TileMapLayer" parent="."]
 y_sort_enabled = true
