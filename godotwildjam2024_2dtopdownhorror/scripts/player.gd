@@ -20,6 +20,7 @@ func movement_controller():
 		velocity.y += 1
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
+
 	if velocity:
 		if is_equal_approx(PI / 2, velocity.angle()):
 			sprite.play("moving_down")
