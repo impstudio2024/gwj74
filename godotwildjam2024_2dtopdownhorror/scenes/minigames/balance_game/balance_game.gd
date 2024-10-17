@@ -9,9 +9,9 @@ func _ready():
 	$Timer.start(5)
 
 func _process(delta):
-	if Input.is_action_just_pressed("move_left"):
+	if Input.is_action_pressed("move_left"):
 		current_mode = "a"
-	if Input.is_action_just_pressed("move_right"):
+	if Input.is_action_pressed("move_right"):
 		current_mode = "d"
 	if current_mode == "a":
 		speed -= 0.1
