@@ -1,6 +1,6 @@
 extends Node
 var day_counter = 1
-
+var pump_completed = false
 func get_grandparent(node : Node, parent_generation : int):
 	var i = 0
 	var parent = node

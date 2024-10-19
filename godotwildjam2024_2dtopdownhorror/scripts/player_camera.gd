@@ -10,6 +10,7 @@ func _process(delta):
 
 func black_screen():
 	if len(get_children()) == 1:
+		get_parent().get_node("Player").controllable = false
 		while $ColorRect.modulate[3] < 1.0:
 			$ColorRect.modulate[3] += 0.2
 			await get_tree().create_timer(get_process_delta_time()*10).timeout
@@ -18,7 +19,7 @@ func black_screen():
 			get_child(len(get_children())-1).modulate[3] += 0.2
 			await get_tree().create_timer(get_process_delta_time()*10).timeout
 	else:
-		$ColorRect.modulate[3] = 1.0
+		get_parent().get_node("Player").controllable = true
 		while $ColorRect.modulate[3] > 0:
 			$ColorRect.modulate[3] -= 0.2
 			await get_tree().create_timer(get_process_delta_time()*10).timeout

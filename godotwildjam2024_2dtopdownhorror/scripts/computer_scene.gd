@@ -25,8 +25,11 @@ func print_message(text):
 			get_node("ConsoleText").text = text
 			break
 		get_node("ConsoleText").text += character
-		await get_tree().process_frame
-		await get_tree().process_frame
+		if character != " ":
+			await get_tree().process_frame
+			await get_tree().process_frame
+			await get_tree().process_frame
+			await get_tree().process_frame
 	message_printed = true
 
 
