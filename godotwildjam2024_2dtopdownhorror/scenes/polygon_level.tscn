@@ -63,7 +63,6 @@ tile_set = ExtResource("5_ro27s")
 [node name="ANNOTATIONS" type="Node" parent="."]
 
 [node name="HIDE BEFORE EXPORT!" type="Node2D" parent="ANNOTATIONS"]
-visible = false
 
 [node name="Player spawns here" type="Label" parent="ANNOTATIONS/HIDE BEFORE EXPORT!"]
 offset_left = -2456.0
@@ -72,26 +71,12 @@ offset_right = -2154.0
 offset_bottom = -713.0
 text = "<- GAME STARTS HERE"
 
-[node name="Boat goes here?" type="Label" parent="ANNOTATIONS/HIDE BEFORE EXPORT!"]
-offset_left = -2384.0
-offset_top = -679.0
-offset_right = -2082.0
-offset_bottom = -656.0
-text = "<- BOAT GOES HERE?"
-
 [node name="Computer goes here" type="Label" parent="ANNOTATIONS/HIDE BEFORE EXPORT!"]
 offset_left = -2899.0
 offset_top = -1524.0
 offset_right = -2597.0
 offset_bottom = -1501.0
 text = "COMPUTER GOES HERE ->"
-
-[node name="Antenna goes here" type="Label" parent="ANNOTATIONS/HIDE BEFORE EXPORT!"]
-offset_left = -2351.0
-offset_top = -1445.0
-offset_right = -2049.0
-offset_bottom = -1422.0
-text = "ANTENNA GOES HERE ->"
 
 [node name="Heating room" type="Label" parent="ANNOTATIONS/HIDE BEFORE EXPORT!"]
 offset_left = -2891.0
@@ -100,13 +85,6 @@ offset_right = -2589.0
 offset_bottom = -1845.0
 text = "HEATING ROOM
 PUMPING MINIGAME GOES HERE"
-
-[node name="Bed goes here" type="Label" parent="ANNOTATIONS/HIDE BEFORE EXPORT!"]
-offset_left = -2857.0
-offset_top = -1382.0
-offset_right = -2555.0
-offset_bottom = -1359.0
-text = "BED GOES HERE ->"
 
 [node name="Walk on water unlock" type="Label" parent="ANNOTATIONS/HIDE BEFORE EXPORT!"]
 offset_left = -650.303

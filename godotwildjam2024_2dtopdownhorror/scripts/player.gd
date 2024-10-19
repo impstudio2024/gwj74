@@ -52,6 +52,8 @@ func hotkey_controller():
 		debug_walk_on_water()
 	if Input.is_action_just_pressed("debug_togglefullscreen"):
 		debug_toggle_fullscreen()
+	if Input.is_action_just_pressed("debug_test_f10"):
+		debug_test_f10()
 
 func interact():
 	for area in get_node("InteractionArea").get_overlapping_areas():
@@ -69,10 +71,18 @@ func debug_toggle_fullscreen():
 	if current_window != 4:
 		previous_window = current_window
 		DisplayServer.window_set_mode(4)
+		#DisplayServer.dialog_show("test","no",PackedStringArray(), 1)
+		
 	else:
 		if previous_window == 4:
 			previous_window = 2
 		DisplayServer.window_set_mode(previous_window)
+
+func debug_test_f10():
+	if DisplayServer.has_feature(DisplayServer.FEATURE_VIRTUAL_KEYBOARD):
+		DisplayServer.virtual_keyboard_show("GOODBYE WORLD")
+	else:
+		print("shit")
 
 func debug_resize_window_random():
 	pass
