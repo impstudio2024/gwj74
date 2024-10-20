@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamPlaylist" load_steps=6 format=3 uid="uid://bab0jrot5owcc"]
+
+[ext_resource type="AudioStream" uid="uid://cneufkule7245" path="res://assets/sounds/One Man Symphony - Remnants of a Distant World (Free) - 01 Main Menu Theme.mp3" id="1_72mur"]
+[ext_resource type="AudioStream" uid="uid://djb68q0uv3wti" path="res://assets/sounds/One Man Symphony - Remnants of a Distant World (Free) - 02 Exploration Theme 01.mp3" id="2_n4rm1"]
+[ext_resource type="AudioStream" uid="uid://cvhocrk5wbnrf" path="res://assets/sounds/One Man Symphony - Remnants of a Distant World (Free) - 03 Exploration Theme 02.mp3" id="3_qkhmd"]
+[ext_resource type="AudioStream" uid="uid://ckklow4bho1fy" path="res://assets/sounds/One Man Symphony - Remnants of a Distant World (Free) - 04 Stealth Theme 01.mp3" id="4_kml5n"]
+[ext_resource type="AudioStream" uid="uid://cd6mcbvmtov38" path="res://assets/sounds/One Man Symphony - Remnants of a Distant World (Free) - 05 Stealth Theme 02.mp3" id="5_xer2l"]
+
+[resource]
+stream_count = 5
+stream_0 = ExtResource("1_72mur")
+stream_1 = ExtResource("2_n4rm1")
+stream_2 = ExtResource("3_qkhmd")
+stream_3 = ExtResource("4_kml5n")
+stream_4 = ExtResource("5_xer2l")

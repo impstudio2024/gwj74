@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://5fykf5wanf0d"]
+[gd_scene load_steps=13 format=4 uid="uid://5fykf5wanf0d"]
 
 [ext_resource type="PackedScene" uid="uid://6quj6tmj4lo6" path="res://scenes/player.tscn" id="1_16oua"]
 [ext_resource type="PackedScene" uid="uid://f8ud243oy7i6" path="res://scenes/player_camera.tscn" id="2_w5a54"]
@@ -6,6 +6,7 @@
 [ext_resource type="TileSet" uid="uid://dlgnrl6b7g771" path="res://assets/sprites/walls_interior.tres" id="5_6d0ax"]
 [ext_resource type="TileSet" uid="uid://8372su7gbrs0" path="res://assets/sprites/exteriors.tres" id="5_ro27s"]
 [ext_resource type="TileSet" uid="uid://cxh156pco5kjh" path="res://assets/sprites/floors.tres" id="6_3mltu"]
+[ext_resource type="AudioStream" uid="uid://bab0jrot5owcc" path="res://assets/sounds/gamesoundtrack.tres" id="7_d6bgv"]
 [ext_resource type="PackedScene" uid="uid://bsc4kh6wml84b" path="res://scenes/interactible_objects/bed.tscn" id="8_34lk6"]
 [ext_resource type="TileSet" uid="uid://bvpcanyfo02ks" path="res://assets/sprites/objects.tres" id="8_e4650"]
 [ext_resource type="Script" path="res://scripts/crash_areas.gd" id="8_ud31k"]
@@ -45,8 +46,12 @@ tile_map_data = PackedByteArray("AABm/83/AAABAAUAAABl/8r/AAABAAUAAABl/8j/AAABAAU
 tile_set = ExtResource("4_dnq3g")
 
 [node name="Player" parent="." instance=ExtResource("1_16oua")]
-position = Vector2(-2463, -632)
+position = Vector2(-2775, -1754)
 collision_mask = 15
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("7_d6bgv")
+autoplay = true
 
 [node name="InteriorWalls" type="TileMapLayer" parent="."]
 y_sort_enabled = true
@@ -67,6 +72,7 @@ tile_set = ExtResource("5_ro27s")
 [node name="ANNOTATIONS" type="Node" parent="."]
 
 [node name="HIDE BEFORE EXPORT!" type="Node2D" parent="ANNOTATIONS"]
+visible = false
 
 [node name="Player spawns here" type="Label" parent="ANNOTATIONS/HIDE BEFORE EXPORT!"]
 offset_left = -2456.0

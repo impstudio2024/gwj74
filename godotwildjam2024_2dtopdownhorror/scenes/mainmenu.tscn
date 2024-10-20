@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://chilot0tqv6te"]
+[gd_scene load_steps=8 format=3 uid="uid://chilot0tqv6te"]
 
 [ext_resource type="Script" path="res://scripts/mainmenu.gd" id="1_rmvx6"]
 [ext_resource type="FontFile" uid="uid://cmpdskqov2uhi" path="res://assets/ui/04B03b-Ole.ttf" id="2_o8g1i"]
+[ext_resource type="FontFile" uid="uid://ocyyhnho2bvu" path="res://assets/ui/04B03-XKP.ttf" id="3_12qf2"]
+[ext_resource type="FontFile" uid="uid://ygs3q5v6mvcl" path="res://assets/ui/04B31-GEG.ttf" id="4_4nsy8"]
+[ext_resource type="Texture2D" uid="uid://lgpvmbp64kkf" path="res://assets/sprites/pc portrait.png" id="5_bm1x4"]
+[ext_resource type="AudioStream" uid="uid://dljx3gvylurjo" path="res://scenes/minigames/pump_game/sounds/388192__savagefx__apple-iie-computer-boot-and-load-a-prodos-5.wav" id="6_y2226"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4rrk"]
+atlas = ExtResource("5_bm1x4")
+region = Rect2(170, 1, 28, 31)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -13,26 +21,28 @@ grow_vertical = 2
 script = ExtResource("1_rmvx6")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-custom_minimum_size = Vector2(320, 32)
+custom_minimum_size = Vector2(384, 32)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -42.5
-offset_top = -55.0
-offset_right = 42.5
-offset_bottom = 55.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -148.0
+offset_right = 160.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 128
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 16
 
 [node name="Play Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_pressed_color = Color(0.027451, 0.0392157, 0.0392157, 1)
+theme_override_colors/font_color = Color(0.6, 0.709804, 0.701961, 1)
 theme_override_colors/icon_normal_color = Color(0.317647, 0.243137, 0.188235, 1)
 theme_override_colors/icon_pressed_color = Color(0.501961, 0.498039, 0.498039, 1)
 theme_override_colors/icon_hover_color = Color(0.501961, 0.498039, 0.498039, 1)
@@ -43,12 +53,87 @@ text = "PLAY"
 [node name="Quit Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_pressed_color = Color(0.027451, 0.0392157, 0.0392157, 1)
+theme_override_colors/font_color = Color(0.4, 0.290196, 0.301961, 1)
 theme_override_colors/icon_normal_color = Color(0.317647, 0.243137, 0.188235, 1)
 theme_override_colors/icon_pressed_color = Color(0.501961, 0.498039, 0.498039, 1)
 theme_override_colors/icon_hover_color = Color(0.501961, 0.498039, 0.498039, 1)
 theme_override_fonts/font = ExtResource("2_o8g1i")
 theme_override_font_sizes/font_size = 64
 text = "QUIT"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 216.0
+grow_vertical = 0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_right = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Credits" type="Label" parent="MarginContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.419608, 0.372549, 0.380392, 1)
+theme_override_colors/font_shadow_color = Color(0.4, 0.290196, 0.301961, 1)
+theme_override_fonts/font = ExtResource("3_12qf2")
+theme_override_font_sizes/font_size = 24
+text = "Programming: 
+Kalasherr
+
+Art:
+tukierownik
+
+Design:
+Gabriel Pando
+Kalasherr
+
+Level Design:
+Gabriel Pando
+
+Soundtrack by One Man Symphony
+Sound effects taken from freesound.org
+
+"
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -477.5
+offset_right = 477.5
+offset_bottom = 108.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 48
+
+[node name="Title" type="Label" parent="MarginContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.580392, 0.627451, 0.619608, 1)
+theme_override_colors/font_shadow_color = Color(0.419608, 0.372549, 0.380392, 1)
+theme_override_colors/font_outline_color = Color(0.4, 0.290196, 0.301961, 1)
+theme_override_constants/line_spacing = 4
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("4_4nsy8")
+theme_override_font_sizes/font_size = 72
+text = "Kozlovsky 
+Institute"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(958, 434)
+scale = Vector2(12, 12)
+texture = SubResource("AtlasTexture_n4rrk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_y2226")
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]
