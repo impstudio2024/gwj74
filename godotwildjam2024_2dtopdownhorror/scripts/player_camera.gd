@@ -7,3 +7,7 @@ func _ready():
 
 func _process(delta):
 	position = get_parent().get_node("Player").position
+
+
+func _on_crash_areas_body_entered(body):
+	pass # Replace with function body.

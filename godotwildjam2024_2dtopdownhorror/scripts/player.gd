@@ -6,7 +6,7 @@ var controllable = true
 @onready var current_window = DisplayServer.window_get_mode()
 
 func _ready():
-	pass
+	add_to_group("player")
 
 func _process(delta):
 	if controllable:
