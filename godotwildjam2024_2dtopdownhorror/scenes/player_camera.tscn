@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://f8ud243oy7i6"]
+[gd_scene load_steps=2 format=3 uid="uid://f8ud243oy7i6"]
 
 [ext_resource type="Script" path="res://scripts/player_camera.gd" id="1_8l7kn"]
-[ext_resource type="PackedScene" uid="uid://bs4s6ap5pcobm" path="res://scenes/minigames/balance_game/balance_game.tscn" id="2_scag8"]
 
 [node name="PlayerCamera" type="Camera2D"]
 top_level = true
@@ -10,4 +9,10 @@ scale = Vector2(0.8, 0.8)
 zoom = Vector2(4, 4)
 script = ExtResource("1_8l7kn")
 
-[node name="BalanceGame" parent="." instance=ExtResource("2_scag8")]
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 0)
+z_index = 1
+offset_left = -200.0
+offset_top = -115.0
+offset_right = 200.0
+offset_bottom = 120.0

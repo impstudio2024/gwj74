@@ -19,6 +19,8 @@ animations = [{
 }]
 
 [node name="ComputerScene" type="TextureRect"]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
 offset_left = -84.0
 offset_top = -46.0
 offset_right = 588.0

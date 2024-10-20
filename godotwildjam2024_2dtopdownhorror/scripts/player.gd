@@ -9,6 +9,8 @@ func _ready():
 	add_to_group("player")
 
 func _process(delta):
+	$InteractionSprite.visible = false
+	show_interaction()
 	if controllable:
 		movement_controller()
 	hotkey_controller()
@@ -22,6 +24,7 @@ func movement_controller():
 		velocity.y += 1
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
+
 	if velocity:
 		if is_equal_approx(PI / 2, velocity.angle()):
 			sprite.play("moving_down")
@@ -86,3 +89,8 @@ func debug_test_f10():
 
 func debug_resize_window_random():
 	pass
+
+func show_interaction():
+	for area in get_node("InteractionArea").get_overlapping_areas():
+		if area is InteractableObject:
+			$InteractionSprite.visible = true

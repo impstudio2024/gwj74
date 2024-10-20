@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://6quj6tmj4lo6"]
+[gd_scene load_steps=19 format=3 uid="uid://6quj6tmj4lo6"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_jaktl"]
 [ext_resource type="Texture2D" uid="uid://dfju773am4dq1" path="res://assets/sprites/player_walking_front-Sheet.png" id="2_cetd5"]
 [ext_resource type="Texture2D" uid="uid://pieq7v72x58l" path="res://assets/sprites/player_walking_left-Sheet.png" id="3_l4px1"]
 [ext_resource type="Texture2D" uid="uid://bqbws8p55m765" path="res://assets/sprites/player_walking_right-Sheet.png" id="4_57wws"]
 [ext_resource type="Texture2D" uid="uid://c6084plqj63g8" path="res://assets/sprites/player_walking_back-Sheet.png" id="5_w2kyu"]
+[ext_resource type="Texture2D" uid="uid://c2l2j58ynlm0c" path="res://assets/sprites/interaction_sprite.png" id="6_2gqbr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ucw0y"]
 atlas = ExtResource("2_cetd5")
@@ -119,3 +120,7 @@ shape = SubResource("CircleShape2D_366kv")
 [node name="Collision" type="CollisionShape2D" parent="PlayerTransparencyController"]
 position = Vector2(-0.0139503, 6.86828)
 shape = SubResource("CircleShape2D_efsyn")
+
+[node name="InteractionSprite" type="Sprite2D" parent="."]
+position = Vector2(5, -9)
+texture = ExtResource("6_2gqbr")

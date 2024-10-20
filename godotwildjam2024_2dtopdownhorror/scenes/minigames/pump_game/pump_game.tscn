@@ -1,10 +1,91 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkjyfowrd648c"]
+[gd_scene load_steps=15 format=3 uid="uid://dkjyfowrd648c"]
 
 [ext_resource type="Script" path="res://scenes/minigames/pump_game/pump_game.gd" id="1_c7pgh"]
-[ext_resource type="Texture2D" uid="uid://dhyw0poqknwnp" path="res://sprites/test_sprites/transparency_check.png" id="1_qnlh1"]
-[ext_resource type="Texture2D" uid="uid://byu1238xe8tpg" path="res://sprites/test_sprites/block_tile.png" id="2_wp156"]
+[ext_resource type="Texture2D" uid="uid://72sxxfgwiq61" path="res://assets/sprites/minigames/minigame background3.png" id="2_oov70"]
+[ext_resource type="Texture2D" uid="uid://d1dubxoyilsdn" path="res://assets/sprites/minigames/minigames1.png" id="4_v8dsy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyihq"]
+atlas = ExtResource("4_v8dsy")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgou1"]
+atlas = ExtResource("4_v8dsy")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jes4q"]
+atlas = ExtResource("4_v8dsy")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukdh1"]
+atlas = ExtResource("4_v8dsy")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5vqt"]
+atlas = ExtResource("4_v8dsy")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qaass"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyihq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgou1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jes4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukdh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5vqt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uj44r"]
+atlas = ExtResource("4_v8dsy")
+region = Rect2(0, 48, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmlpl"]
+atlas = ExtResource("4_v8dsy")
+region = Rect2(16, 48, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yyvv"]
+atlas = ExtResource("4_v8dsy")
+region = Rect2(32, 48, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5urhk"]
+atlas = ExtResource("4_v8dsy")
+region = Rect2(48, 48, 16, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h814w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uj44r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmlpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yyvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5urhk")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="PumpGame" type="Control"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,14 +94,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c7pgh")
 
-[node name="BlockTile" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("2_wp156")
-
-[node name="TransparencyCheck" type="Sprite2D" parent="."]
-texture = ExtResource("1_qnlh1")
+[node name="MinigameBackground" type="Sprite2D" parent="."]
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("2_oov70")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_left = -20.0
@@ -29,3 +108,15 @@ offset_right = 20.0
 offset_bottom = 12.0
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ProgressSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(112, -39)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_qaass")
+
+[node name="PumpSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-135.357, 19.27)
+scale = Vector2(2.82, 2.82)
+sprite_frames = SubResource("SpriteFrames_h814w")
+
+[connection signal="animation_finished" from="PumpSprite" to="." method="_on_pump_sprite_animation_finished"]
