@@ -94,6 +94,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c7pgh")
 
+[node name="MinigameBackground" type="Sprite2D" parent="."]
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("2_oov70")
+
 [node name="Label" type="Label" parent="."]
 visible = false
 z_index = 1
@@ -104,10 +108,6 @@ offset_right = 20.0
 offset_bottom = 12.0
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="MinigameBackground" type="Sprite2D" parent="."]
-scale = Vector2(0.47, 0.47)
-texture = ExtResource("2_oov70")
 
 [node name="ProgressSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(112, -39)

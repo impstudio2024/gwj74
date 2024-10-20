@@ -11,7 +11,7 @@ func _ready():
 
 func _process(delta):
 	$ProgressSprite.pause()
-	$ProgressSprite.frame = counter/(goal/5)
+	$ProgressSprite.frame = counter/(goal/5) -1
 	$Label.text = str(counter)
 	if Input.is_action_just_pressed("interact") and !fading:
 		fade()
