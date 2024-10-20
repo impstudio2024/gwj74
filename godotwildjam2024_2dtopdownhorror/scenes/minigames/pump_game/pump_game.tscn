@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dkjyfowrd648c"]
+[gd_scene load_steps=15 format=3 uid="uid://dkjyfowrd648c"]
 
 [ext_resource type="Script" path="res://scenes/minigames/pump_game/pump_game.gd" id="1_c7pgh"]
+[ext_resource type="Texture2D" uid="uid://72sxxfgwiq61" path="res://assets/sprites/minigames/minigame background3.png" id="2_oov70"]
 [ext_resource type="Texture2D" uid="uid://d1dubxoyilsdn" path="res://assets/sprites/minigames/minigames1.png" id="4_v8dsy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iyihq"]
@@ -83,6 +84,7 @@ animations = [{
 }]
 
 [node name="PumpGame" type="Control"]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 3
 layout_mode = 3
 anchors_preset = 15
@@ -103,11 +105,18 @@ offset_bottom = 12.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="MinigameBackground" type="Sprite2D" parent="."]
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("2_oov70")
+
 [node name="ProgressSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(-50, -24)
+position = Vector2(112, -39)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_qaass")
 
 [node name="PumpSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-135.357, 19.27)
+scale = Vector2(2.82, 2.82)
 sprite_frames = SubResource("SpriteFrames_h814w")
 
 [connection signal="animation_finished" from="PumpSprite" to="." method="_on_pump_sprite_animation_finished"]
