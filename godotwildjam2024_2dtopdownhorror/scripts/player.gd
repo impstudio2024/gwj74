@@ -7,6 +7,8 @@ func _ready():
 	pass
 
 func _process(delta):
+	$InteractionSprite.visible = false
+	show_interaction()
 	if controllable:
 		movement_controller()
 	hotkey_controller()
@@ -47,3 +49,8 @@ func interact():
 			area.interact()
 			return true
 	return false
+
+func show_interaction():
+	for area in get_node("InteractionArea").get_overlapping_areas():
+		if area is InteractableObject:
+			$InteractionSprite.visible = true

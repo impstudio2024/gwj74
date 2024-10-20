@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://f8ud243oy7i6"]
+[gd_scene load_steps=2 format=3 uid="uid://f8ud243oy7i6"]
 
 [ext_resource type="Script" path="res://scripts/player_camera.gd" id="1_8l7kn"]
-[ext_resource type="PackedScene" uid="uid://b4ag2iie4lxw3" path="res://scenes/minigames/battery_game/battery_game.tscn" id="2_qwt8t"]
 
 [node name="PlayerCamera" type="Camera2D"]
 top_level = true
@@ -17,5 +16,3 @@ offset_left = -200.0
 offset_top = -115.0
 offset_right = 200.0
 offset_bottom = 120.0
-
-[node name="BatteryGame" parent="." instance=ExtResource("2_qwt8t")]

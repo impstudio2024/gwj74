@@ -39,6 +39,7 @@ func _process(delta):
 func next_iteration():
 	if counter == goal:
 		fade()
+		Global.batteries_completed = true
 	for child in $Batteries.get_children():
 		child.reparent($UsedBatteries)
 	$Batteries.add_child(load("res://scenes/minigames/battery_game/battery.tscn").instantiate())
