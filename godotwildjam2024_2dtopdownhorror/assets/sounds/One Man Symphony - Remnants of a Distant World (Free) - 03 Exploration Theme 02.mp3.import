@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvhocrk5wbnrf"
+path="res://.godot/imported/One Man Symphony - Remnants of a Distant World (Free) - 03 Exploration Theme 02.mp3-52942366eb3b8dcae9db8612e5ac849d.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/One Man Symphony - Remnants of a Distant World (Free) - 03 Exploration Theme 02.mp3"
+dest_files=["res://.godot/imported/One Man Symphony - Remnants of a Distant World (Free) - 03 Exploration Theme 02.mp3-52942366eb3b8dcae9db8612e5ac849d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

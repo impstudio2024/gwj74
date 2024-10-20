@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cd6mcbvmtov38"
+path="res://.godot/imported/One Man Symphony - Remnants of a Distant World (Free) - 05 Stealth Theme 02.mp3-f2043ce71e42b52b23838f90bca26663.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/One Man Symphony - Remnants of a Distant World (Free) - 05 Stealth Theme 02.mp3"
+dest_files=["res://.godot/imported/One Man Symphony - Remnants of a Distant World (Free) - 05 Stealth Theme 02.mp3-f2043ce71e42b52b23838f90bca26663.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
