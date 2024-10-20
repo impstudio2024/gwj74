@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://5fykf5wanf0d"]
+[gd_scene load_steps=18 format=4 uid="uid://5fykf5wanf0d"]
 
 [ext_resource type="PackedScene" uid="uid://6quj6tmj4lo6" path="res://scenes/player.tscn" id="1_16oua"]
 [ext_resource type="PackedScene" uid="uid://f8ud243oy7i6" path="res://scenes/player_camera.tscn" id="2_w5a54"]
@@ -6,9 +6,8 @@
 [ext_resource type="TileSet" uid="uid://dlgnrl6b7g771" path="res://assets/sprites/walls_interior.tres" id="5_6d0ax"]
 [ext_resource type="TileSet" uid="uid://8372su7gbrs0" path="res://assets/sprites/exteriors.tres" id="5_ro27s"]
 [ext_resource type="TileSet" uid="uid://cxh156pco5kjh" path="res://assets/sprites/floors.tres" id="6_3mltu"]
-[ext_resource type="AudioStream" uid="uid://bab0jrot5owcc" path="res://assets/sounds/gamesoundtrack.tres" id="7_d6bgv"]
-[ext_resource type="PackedScene" uid="uid://bsc4kh6wml84b" path="res://scenes/interactible_objects/bed.tscn" id="8_34lk6"]
 [ext_resource type="Script" path="res://scripts/bed.gd" id="6_77njr"]
+[ext_resource type="AudioStream" uid="uid://bab0jrot5owcc" path="res://assets/sounds/gamesoundtrack.tres" id="7_d6bgv"]
 [ext_resource type="Script" path="res://scripts/antenn.gd" id="7_kacdn"]
 [ext_resource type="TileSet" uid="uid://bvpcanyfo02ks" path="res://assets/sprites/objects.tres" id="8_e4650"]
 [ext_resource type="Script" path="res://scripts/crash_areas.gd" id="8_ud31k"]
@@ -62,6 +61,7 @@ collision_mask = 15
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("7_d6bgv")
 autoplay = true
+
 [node name="InteractableObjects" type="Node2D" parent="."]
 
 [node name="Bed" type="Area2D" parent="InteractableObjects"]
