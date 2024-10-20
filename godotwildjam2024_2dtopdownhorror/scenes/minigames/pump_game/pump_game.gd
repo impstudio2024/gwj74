@@ -1,5 +1,4 @@
 extends Control
-
 var counter = 0
 var goal = 20
 var inputable = true
@@ -11,7 +10,7 @@ func _ready():
 
 func _process(delta):
 	$ProgressSprite.pause()
-	$ProgressSprite.frame = counter/(goal/5) -1
+	$ProgressSprite.frame = counter/(goal/5)
 	$Label.text = str(counter)
 	if Input.is_action_just_pressed("interact") and !fading:
 		fade()
@@ -19,15 +18,9 @@ func _process(delta):
 		if Input.is_action_just_pressed("move_down") and $PumpSprite.frame == 0:
 			$PumpSprite.play("default")
 			counter += 1
-			pressable = false
-		if Input.is_action_just_pressed("move_up") and $PumpSprite.frame == 3:
-			$PumpSprite.play_backwards("default")
-			counter += 1
-			pressable = false
-	if counter == goal:
-		Global.pump_completed = true
-
-
+	if counter >= goal:
+		fade()
+			
 func _on_pump_sprite_animation_finished():
 	pressable = true
 
