@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4ag2iie4lxw3"]
+
+[ext_resource type="Script" path="res://scenes/minigames/battery_game/battery_game.gd" id="1_g7slr"]
+[ext_resource type="Texture2D" uid="uid://72sxxfgwiq61" path="res://assets/sprites/minigames/minigame background3.png" id="2_otfdb"]
+[ext_resource type="FontFile" uid="uid://ocyyhnho2bvu" path="res://assets/ui/04B03-XKP.ttf" id="3_4t3ud"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kk4h3"]
+font = ExtResource("3_4t3ud")
+
+[node name="BatteryGame" type="Control"]
+texture_filter = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g7slr")
+
+[node name="MinigameBackground" type="Sprite2D" parent="."]
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("2_otfdb")
+
+[node name="Batteries" type="Node2D" parent="."]
+
+[node name="UsedBatteries" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 125.0
+offset_top = -12.0
+offset_right = 165.0
+offset_bottom = 11.0
+label_settings = SubResource("LabelSettings_kk4h3")

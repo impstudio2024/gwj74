@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://btbwvfr6pjwxj"]
+
+[ext_resource type="Texture2D" uid="uid://bve7v006a0jvh" path="res://assets/sprites/minigames/batteries.png" id="1_2nuav"]
+[ext_resource type="Script" path="res://scenes/minigames/battery_game/battery.gd" id="2_qhgbo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cyuw"]
+atlas = ExtResource("1_2nuav")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cgqy"]
+atlas = ExtResource("1_2nuav")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_urr34"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cyuw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cgqy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Battery" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_urr34")
+script = ExtResource("2_qhgbo")
